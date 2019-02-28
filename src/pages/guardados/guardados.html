@@ -6,7 +6,7 @@
 
 <ion-content>
     <ion-list>
-        <button ion-item *ngFor="let data of historial;let i = index" (click)="abrir_scan(index)">
+        <button ion-item *ngFor="let data of historial;let i = index" (click)="abrir_scan(i)">
              {{data.info}}
              <p>{{data.tipo}}</p>
         </button>

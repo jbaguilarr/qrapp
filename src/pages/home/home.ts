@@ -22,7 +22,18 @@ export class HomePage {
     console.log("Realizando scan....");
 
      if(!this.platform.is('cordova')){
-      this._historialProvider.agregar_historial("http://google.com");
+      //this._historialProvider.agregar_historial("http://google.com");
+      //this._historialProvider.agregar_historial("geo:-17.780606,-63.1763473");
+      this._historialProvider.agregar_historial( `BEGIN:VCARD
+VERSION:2.1
+N:Kent;Clark
+FN:Clark Kent
+ORG:
+TEL;HOME;VOICE:12345
+TEL;TYPE=cell:67890
+ADR;TYPE=work:;;;
+EMAIL:clark@superman.com
+END:VCARD` );
       return;
      }
     this.barcodeScanner.scan().then(barcodeData => {
